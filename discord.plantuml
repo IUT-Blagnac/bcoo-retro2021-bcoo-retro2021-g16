@@ -7,6 +7,8 @@ class utilisateur {
   PhotoDeProfil
   Statu
   ReseauSociaux
+  adresseMail
+  numTel
 }
 
 class serveur {
