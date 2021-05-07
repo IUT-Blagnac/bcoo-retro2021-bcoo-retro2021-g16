@@ -32,6 +32,7 @@ class Channel {
 class ChannelAudio{
   nbPersonne
   activerMicro()
+  activerSong()
 }
 
 class ChannelTextuel{
