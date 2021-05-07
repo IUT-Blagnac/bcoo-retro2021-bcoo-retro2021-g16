@@ -7,5 +7,7 @@
 - Kilian Milot
 
 == Outils utilisés/requis
+
 Discord
+
 plantuml
