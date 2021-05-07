@@ -27,11 +27,11 @@ class Role {
 class Channel {
   ID
   nom
-  activerMicro()
 }
 
 class ChannelAudio{
   nbPersonne
+  activerMicro()
 }
 
 class ChannelTextuel{
