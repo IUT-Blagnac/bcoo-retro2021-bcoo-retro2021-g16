@@ -9,4 +9,4 @@
 == Outils utilisés/requis
 
 Discord
-plantuml
+Plantuml
