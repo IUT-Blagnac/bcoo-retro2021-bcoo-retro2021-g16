@@ -1,0 +1,15 @@
+@startuml
+
+actor A
+actor B
+
+A -up-> (up)
+A -right-> (center)
+A -down-> (down)
+
+
+B -up-> (up)
+B -left-> (center)
+B -down-> (down)
+
+@enduml
