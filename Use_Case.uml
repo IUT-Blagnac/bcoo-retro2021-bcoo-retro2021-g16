@@ -3,13 +3,13 @@
 actor utilisateur 
 actor admine
 
-A -up-> (up)
-A -right-> (center)
-A -down-> (down)
+utilisateur -up-> (up)
+utilisateur -right-> (center)
+utilisateur -down-> (down)
 
 
-B -up-> (up)
-B -left-> (center)
-B -down-> (down)
+admine -up-> (up)
+admine -left-> (center)
+admine -down-> (down)
 
 @enduml
