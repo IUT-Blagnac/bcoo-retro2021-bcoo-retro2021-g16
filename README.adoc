@@ -4,7 +4,7 @@
 
 - Bastien Gimenez
 - Maxime Etcheverria
-- Kilian Millot
+- Kilian Milot
 
 == Outils utilisés/requis
 
