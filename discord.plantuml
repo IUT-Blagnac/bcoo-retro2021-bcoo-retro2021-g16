@@ -13,6 +13,7 @@ class serveur {
   ID
   Nom
   NombreMembre
+  Alchannel 
 }
 
 class Role {
@@ -33,6 +34,9 @@ class ChannelTextuel{
   Message
 }
 
+class Application {
+ alServeur
+}
 
 utilisateur --> serveur
 serveur .> Role : <<Extend>>
