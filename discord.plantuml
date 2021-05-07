@@ -27,7 +27,7 @@ class Role {
 class Channel {
   ID
   nom
-  activerMicro();
+  activerMicro()
 }
 
 class ChannelAudio{
