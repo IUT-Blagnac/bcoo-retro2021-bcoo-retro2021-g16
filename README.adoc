@@ -2,9 +2,9 @@
 
 == Membre du groupe
 
-- Dupont (2A)
-- Durand (3B)
-- ...
+- Bastien Gimenez
+- Maxime Etcheverria
+- Kilian Millot
 
 == Outils utilisés/requis
 
