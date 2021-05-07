@@ -1,13 +1,11 @@
 
-class Utilisateur
-{
-
+class utilisateur {
+  Pseudo 
+  Age 
+  PhotoDeProfil
+  Statu
+  ReseauSociaux
 }
-
-actor client
-
-client -right-> (joint un serveur)
-client -right-> (crée un serveur)
 
 
 @enduml
