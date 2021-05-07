@@ -3,3 +3,11 @@ class Utilisateur
 {
 
 }
+
+actor client
+
+client -right-> (joint un serveur)
+client -right-> (crée un serveur)
+
+
+@enduml
