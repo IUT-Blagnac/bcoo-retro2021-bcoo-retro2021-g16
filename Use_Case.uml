@@ -3,13 +3,12 @@
 actor utilisateur 
 actor admine
 
-utilisateur -up-> (up)
-utilisateur -right-> (center)
-utilisateur -down-> (down)
+utilisateur -up-> (InviterPerssoneSurLeServ)
+utilisateur -right-> (AccesServeur)
 
 
-admine -up-> (up)
-admine -left-> (center)
-admine -down-> (down)
+admine -up-> (InviterPerssoneSurLeServ)
+admine -left-> (AccesServeur)
+admine -down-> (EditServeur)
 
 @enduml
