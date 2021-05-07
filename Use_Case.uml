@@ -1,7 +1,7 @@
 @startuml
 
-actor A
-actor B
+actor utilisateur 
+actor admine
 
 A -up-> (up)
 A -right-> (center)
