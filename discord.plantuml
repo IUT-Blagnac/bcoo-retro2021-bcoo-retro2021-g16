@@ -1,5 +1,6 @@
 
 class utilisateur {
+  ID
   Pseudo 
   Age 
   PhotoDeProfil
@@ -7,5 +8,11 @@ class utilisateur {
   ReseauSociaux
 }
 
+class serveur {
+  ID
+  Nom
+}
 
+
+utilisateur --> serveur
 @enduml
