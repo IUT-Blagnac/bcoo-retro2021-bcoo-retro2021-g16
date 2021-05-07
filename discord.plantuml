@@ -20,9 +20,24 @@ class Role {
   droits
 }
 
+class Channel {
+  ID
+  nom
+}
+
+class ChannelAudio{
+  nbPersonne
+}
+
+class ChannelTextuel{
+  Message
+}
+
 
 utilisateur --> serveur
 serveur .> Role : <<Extend>>
-
+serveur --> Channel
+Channel .> ChannelTextuel : <<Extend>>
+Channel .> ChannelAudio : <<Extend>>
 
 @enduml
