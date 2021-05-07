@@ -17,6 +17,7 @@ class serveur {
   Nom
   NombreMembre
   Alchannel 
+  activerNotification()
 }
 
 class Role {
