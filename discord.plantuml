@@ -1,3 +1,4 @@
+@startuml
 
 class utilisateur {
   ID
@@ -11,8 +12,17 @@ class utilisateur {
 class serveur {
   ID
   Nom
+  NombreMembre
+}
+
+class Role {
+  isAdmin
+  droits
 }
 
 
 utilisateur --> serveur
+serveur .> Role : <<Extend>>
+
+
 @enduml
