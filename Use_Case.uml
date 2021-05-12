@@ -1,14 +1,50 @@
 @startuml
 
-actor utilisateur 
-actor admine
+actor Utilisateur
+actor Serveur
 
-utilisateur -up-> (InviterPerssoneSurLeServ)
-utilisateur -right-> (AccesServeur)
+usecase em as (Envoyer Message)
+    usecase ed as (Envoier Document)
+
+usecase aa as (Ajouter Amis)
+
+usecase pa as (Passer un Appel)
+    usecase as as (Activer Son)
+    usecase ac as (Activer Camera)
+    usecase pe as (Partager Ecran)
+
+usecase sc as (Se Connecter)
+
+usecase cs as (Créer un Serveur)
+    usecase css as (Créer un Salon)
+        usecase ca as (Channel Audio)
+        usecase ct as (Channel Textuel)
+    usecase ia as (Inviter des Utilisateurs)
 
 
-admine -up-> (InviterPerssoneSurLeServ)
-admine -left-> (AccesServeur)
-admine -down-> (EditServeur)
+Utilisateur -> em
+em ..> ed : <<extend>>
+
+Utilisateur-> aa
+
+Utilisateur -> pa
+pa ..> ac : <<extend>>
+pa ..> as : <<extend>>
+pa ..> pe : <<extend>>
+
+Utilisateur -> sc
+
+Utilisateur --> cs
+cs ..> css: <<extend>>
+cs <.. ia: <<extend>>
+
+ca ..> css
+ct ..> css
+
+cs --> Serveur
+sc --> Serveur
+pa --> Serveur
+em --> Serveur
+
 
 @enduml
