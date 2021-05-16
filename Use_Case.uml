@@ -1,10 +1,10 @@
 @startuml
-
 actor Utilisateur
-actor Serveur
+actor Utilisateur_Connecte
+actor Administrateur
 
 usecase em as (Envoyer Message)
-    usecase ed as (Envoier Document)
+    usecase ed as (Envoyer Document)
 
 usecase aa as (Ajouter Amis)
 
@@ -17,34 +17,29 @@ usecase sc as (Se Connecter)
 
 usecase cs as (Créer un Serveur)
     usecase css as (Créer un Salon)
-        usecase ca as (Channel Audio)
-        usecase ct as (Channel Textuel)
+        usecase ca as (Creer Salon Audio)
+        usecase ct as (Creer Salon Textuel)
     usecase ia as (Inviter des Utilisateurs)
 
 
-Utilisateur -> em
-em ..> ed : <<extend>>
+Utilisateur_Connecte -- em
+em <.. ed : <<extend>>
 
-Utilisateur-> aa
+Utilisateur_Connecte -- aa
+Utilisateur_Connecte -- pa
+pa <.. ac : <<extend>>
+pa <.. as : <<extend>>
+pa <.. pe : <<extend>>
 
-Utilisateur -> pa
-pa ..> ac : <<extend>>
-pa ..> as : <<extend>>
-pa ..> pe : <<extend>>
+Utilisateur -- sc
+sc -- Utilisateur_Connecte
 
-Utilisateur -> sc
 
-Utilisateur --> cs
-cs ..> css: <<extend>>
-cs <.. ia: <<extend>>
 
+Utilisateur_Connecte -- cs
+Administrateur <.. Utilisateur_Connecte : <<extend>>
+Administrateur -- css
+Utilisateur_Connecte -- ia: <<extend>>
 ca ..> css
 ct ..> css
-
-cs --> Serveur
-sc --> Serveur
-pa --> Serveur
-em --> Serveur
-
-
 @enduml
