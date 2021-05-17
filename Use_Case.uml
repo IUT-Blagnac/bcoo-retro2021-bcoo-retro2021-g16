@@ -12,8 +12,6 @@ usecase pa as (Passer un Appel)
     usecase ac as (Activer Camera)
     usecase pe as (Partager Ecran)
 
-usecase sc as (Se Connecter)
-
 usecase cs as (Créer un Serveur)
     usecase css as (Créer un Salon)
         usecase ca as (Creer Salon Audio)
