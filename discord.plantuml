@@ -40,10 +40,6 @@ class ChannelTextuel{
   Message
 }
 
-class Application {
- alServeur
-}
-
 utilisateur --> serveur
 serveur .> Role : <<Extend>>
 serveur --> Channel
