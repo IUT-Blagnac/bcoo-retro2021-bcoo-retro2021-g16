@@ -34,4 +34,5 @@ Admin -- css
 Utilisateur -- ia: <<extend>>
 ca ..> css
 ct ..> css
+
 @enduml
