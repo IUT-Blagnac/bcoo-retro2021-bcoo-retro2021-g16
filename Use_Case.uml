@@ -1,1 +1,35 @@
+@startuml
+actor Utilisateur
+usecase EnvoyerMessage
+usecase EnvoyerPhoto
+usecase AjouterAmis
+usecase PasserAppel
+usecase ActiverSon
+usecase ActiverCamera
+usecase PartagerEcran
+usecase InviterUtilisateurs
 
+actor Admin
+usecase CréerServeur
+usecase CréerSalon
+usecase CreerSalonAudio
+usecase CreerSalonTextuel
+
+Utilisateur -- EnvoyerMessage
+EnvoyerMessage <.. EnvoyerPhoto : <<extend>>
+
+Utilisateur -- AjouterAmis
+Utilisateur -- PasserAppel
+PasserAppel <.. ActiverCamera : <<extend>>
+PasserAppel <.. ActiverSon : <<extend>>
+PasserAppel <.. PartagerEcran : <<extend>>
+
+Admin -- CréerServeur
+Admin <.. Utilisateur : <<extend>>
+CréerServeur -- CréerSalon
+Utilisateur -- InviterUtilisateurs
+
+CreerSalonAudio ..> CréerSalon
+CreerSalonTextuel ..> CréerSalon
+
+@enduml
