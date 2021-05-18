@@ -38,6 +38,9 @@ class ChannelAudio{
 
 class ChannelTextuel{
   Message
+  EnvoyerPhoto()
+  EnvoyerVideo()
+  EnvoyerGif()
 }
 
 utilisateur --> serveur
