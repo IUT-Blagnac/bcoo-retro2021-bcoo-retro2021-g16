@@ -16,6 +16,7 @@ usecase CréerServeur
 usecase CréerSalon
 usecase CreerSalonAudio
 usecase CreerSalonTextuel
+usecase DonneRole
 
 Utilisateur -- EnvoyerMessage
 EnvoyerMessage <.. EnvoyerPhoto : extend
@@ -28,6 +29,7 @@ PasserAppel <.. ActiverCamera : extend
 PasserAppel <.. ActiverSon : extend
 PasserAppel <.. PartagerEcran : extend
 
+Admin -- DonneRole
 Admin -- CréerServeur
 Admin <.. Utilisateur : extend
 CréerServeur -- CréerSalon
