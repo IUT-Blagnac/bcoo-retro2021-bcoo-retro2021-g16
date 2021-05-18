@@ -7,7 +7,7 @@ utilisateur -> serveur: connection
 activate serveur
 
 serveur -> admin: connection en tant administrateur
-serveur -> serveur: connection 
+serveur -> serveur: connection utilisateur
 
 activate admin
 admin --> admin: connection effectuer 
