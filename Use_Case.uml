@@ -1,4 +1,5 @@
 @startuml
+
 actor Utilisateur
 usecase EnvoyerMessage
 usecase EnvoyerPhoto
@@ -29,7 +30,7 @@ Admin <.. Utilisateur : <<extend>>
 CréerServeur -- CréerSalon
 Utilisateur -- EnvoyerInvitationServeur
 
-CreerSalonAudio ..> CréerSalon
-CreerSalonTextuel ..> CréerSalon
+CreerSalonAudio --> CréerSalon
+CreerSalonTextuel --> CréerSalon
 
 @enduml
