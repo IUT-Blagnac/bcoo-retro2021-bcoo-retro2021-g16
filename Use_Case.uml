@@ -3,6 +3,7 @@
 actor Utilisateur
 usecase EnvoyerMessage
 usecase EnvoyerPhoto
+usecase EnvoyerGif
 usecase AjouterAmis
 usecase PasserAppel
 usecase ActiverSon
@@ -17,16 +18,17 @@ usecase CreerSalonAudio
 usecase CreerSalonTextuel
 
 Utilisateur -- EnvoyerMessage
-EnvoyerMessage <.. EnvoyerPhoto : <<extend>>
+EnvoyerMessage <.. EnvoyerPhoto : extend
+EnvoyerMessage <.. EnvoyerGif : extend
 
 Utilisateur -- AjouterAmis
 Utilisateur -- PasserAppel
-PasserAppel <.. ActiverCamera : <<extend>>
-PasserAppel <.. ActiverSon : <<extend>>
-PasserAppel <.. PartagerEcran : <<extend>>
+PasserAppel <.. ActiverCamera : extend
+PasserAppel <.. ActiverSon : extend
+PasserAppel <.. PartagerEcran : extend
 
 Admin -- CréerServeur
-Admin <.. Utilisateur : <<extend>>
+Admin <.. Utilisateur : extend
 CréerServeur -- CréerSalon
 Utilisateur -- EnvoyerInvitationServeur
 
