@@ -9,7 +9,7 @@ usecase PasserAppel
 usecase ActiverSon
 usecase ActiverCamera
 usecase PartagerEcran
-usecase EnvoyerInvitationServeur
+usecase InvitationServeur
 
 actor Admin
 usecase CréerServeur
@@ -20,6 +20,7 @@ usecase CreerSalonTextuel
 Utilisateur -- EnvoyerMessage
 EnvoyerMessage <.. EnvoyerPhoto : extend
 EnvoyerMessage <.. EnvoyerGif : extend
+EnvoyerMessage <.. InvitationServeur : extend
 
 Utilisateur -- AjouterAmis
 Utilisateur -- PasserAppel
@@ -30,7 +31,6 @@ PasserAppel <.. PartagerEcran : extend
 Admin -- CréerServeur
 Admin <.. Utilisateur : extend
 CréerServeur -- CréerSalon
-Utilisateur -- EnvoyerInvitationServeur
 
 CreerSalonAudio --> CréerSalon
 CreerSalonTextuel --> CréerSalon
