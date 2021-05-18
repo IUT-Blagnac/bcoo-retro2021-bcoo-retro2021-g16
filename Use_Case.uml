@@ -7,7 +7,7 @@ usecase PasserAppel
 usecase ActiverSon
 usecase ActiverCamera
 usecase PartagerEcran
-usecase InviterUtilisateurs
+usecase EnvoyerInvitationServeur
 
 actor Admin
 usecase CréerServeur
@@ -27,7 +27,7 @@ PasserAppel <.. PartagerEcran : <<extend>>
 Admin -- CréerServeur
 Admin <.. Utilisateur : <<extend>>
 CréerServeur -- CréerSalon
-Utilisateur -- InviterUtilisateurs
+Utilisateur -- EnvoyerInvitationServeur
 
 CreerSalonAudio ..> CréerSalon
 CreerSalonTextuel ..> CréerSalon
