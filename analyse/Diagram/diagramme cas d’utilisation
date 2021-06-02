@@ -3,15 +3,20 @@
 actor enseignants
 usecase Profil_Enseignants as PE
 usecase Modifier_Profil_Enseignants as MPE
+usecase Identiters as IE
+usecase Module as ME
+usecase Specialiter 
 
 actor Secretariat
 
 actor Eleve 
 
 enseignants -- MPE
-enseignants -- PE 
+PE ..> MPE : extend 
 Secretariat -- MPE 
 Eleve -- PE : consulter
-
+PE -- IE
+PE -- ME
+PE -- Specialiter
 
 @enduml
