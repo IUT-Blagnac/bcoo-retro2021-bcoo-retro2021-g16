@@ -14,13 +14,13 @@ actor Eleve
 usecase defini_le_module_de_ensegant as DME
 
 enseignants -- MPE
-PE ..> MPE : extend 
+PE ..> MPE : extends
 Secretariat -- MPE 
 Eleve -- PE : consulter
 PE -- IE
 PE -- ME
 PE -- Specialiter
-enseignants ..> EV : extend
+enseignants ..> EV : extends
 EV -- DME
 Secretariat -- DME
 
