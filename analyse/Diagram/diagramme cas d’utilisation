@@ -1,17 +1,17 @@
 @startuml
 
 actor enseignants
-usecase profil
-usecase ModifierProfil
+usecase Profil_Enseignants as PE
+usecase Modifier_Profil_Enseignants as MPE
 
 actor Secretariat
 
 actor Eleve 
 
-enseignants -- ModifierProfil
-enseignants -- profil 
-Secretariat -- ModifierProfil 
-Eleve -- profil : consulter
+enseignants -- MPE
+enseignants -- PE 
+Secretariat -- MPE 
+Eleve -- PE : consulter
 
 
 @enduml
