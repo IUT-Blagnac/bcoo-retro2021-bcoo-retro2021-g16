@@ -1,1 +1,27 @@
+@startuml
 
+autonumber
+
+Enseignant -> profil: modifier
+
+activate secretaire
+secretaire -> profil: modifier
+
+activate profil
+profil -> profil: validation modification
+secretaire -> profil: consulter
+Enseignant -> profil: consulter
+
+profil -> Enseignant: afficher le profil
+profil -> secretaire: afficher le profil
+deactivate secretaire
+
+activate Eleve
+Eleve -> profil: visualiser
+profil -> Eleve: afficher le profil
+
+deactivate Eleve
+deactivate profil
+
+
+@enduml
