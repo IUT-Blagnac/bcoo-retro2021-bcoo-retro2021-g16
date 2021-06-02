@@ -1,1 +1,26 @@
+@startuml
 
+class Enseignant {
+  idEnseignant
+  nom
+  prénom
+  initiales 
+  une photo
+  un descriptif succinct
+}
+
+class formation{
+  idFormation
+  nom formation
+}
+
+class Module{
+  idModule
+  nom Module
+  Initiales
+}
+
+Enseignant "1" -- "1" formation
+Enseignant "1..*" -- "1..*" Module
+
+@enduml
