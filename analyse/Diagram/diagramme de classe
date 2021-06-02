@@ -20,7 +20,18 @@ class Module{
   Initiales
 }
 
-Enseignant "1" -- "1" formation
-Enseignant "1..*" -- "1..*" Module
+class profil {
+  idProfil
+  Profil d un enseignant
+}
+
+class Eleve{
+
+}
+
+Enseignant "1" -- "1" formation : pratique 
+Enseignant "1..*" -- "1..*" Module : assigner
+Enseignant "1" -right- "1" profil : appartient
+Eleve "1..*" -down- "1" profil : consulter
 
 @enduml
