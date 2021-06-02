@@ -1,1 +1,17 @@
+@startuml
 
+actor enseignants
+usecase profil
+usecase ModifierProfil
+
+actor Secretariat
+
+actor Eleve 
+
+enseignants -- ModifierProfil
+enseignants -- profil 
+Secretariat -- ModifierProfil 
+Eleve -- profil : consulter
+
+
+@enduml
