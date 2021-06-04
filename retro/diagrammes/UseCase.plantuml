@@ -1,40 +1,52 @@
 @startuml
 
-actor Utilisateur
-usecase EnvoyerMessage
-usecase EnvoyerPhoto
-usecase EnvoyerGif
-usecase AjouterAmis
-usecase PasserAppel
-usecase ActiverSon
-usecase ActiverCamera
-usecase PartagerEcran
-usecase InvitationServeur
+class utilisateur {
+  ID
+  Pseudo 
+  Age 
+  PhotoDeProfil
+  Statu
+  ReseauSociaux
+  adresseMail
+  numTel
+}
 
-actor Admin
-usecase CréerServeur
-usecase CréerSalon
-usecase CreerSalonAudio
-usecase CreerSalonTextuel
-usecase DonneRole
+class serveur {
+  ID
+  PhotoDuServeur
+  Nom
+  NombreMembre
+  Alchannel 
+  activerNotification()
+}
 
-Utilisateur -- EnvoyerMessage
-EnvoyerMessage <.. EnvoyerPhoto : extend
-EnvoyerMessage <.. EnvoyerGif : extend
-EnvoyerMessage <.. InvitationServeur : extend
+class Role {
+  isAdmin
+  droits
+}
 
-Utilisateur -- AjouterAmis
-Utilisateur -- PasserAppel
-PasserAppel <.. ActiverCamera : extend
-PasserAppel <.. ActiverSon : extend
-PasserAppel <.. PartagerEcran : extend
+class Channel {
+  ID
+  nom
+}
 
-Admin -- DonneRole
-Admin -- CréerServeur
-Admin <.. Utilisateur : extend
-CréerServeur -- CréerSalon
+class ChannelAudio{
+  nbPersonne
+  activerMicro()
+  activerSong()
+}
 
-CreerSalonAudio --> CréerSalon
-CreerSalonTextuel --> CréerSalon
+class ChannelTextuel{
+  Message
+  EnvoyerPhoto()
+  EnvoyerVideo()
+  EnvoyerGif()
+}
+
+utilisateur"1..*" -- "1..*" serveur
+serveur"1" -- "1..*"  Role
+serveur "1 " -right- " 1..*" Channel : "           "
+Channel "1" -- "1..*"  ChannelTextuel 
+Channel "1" -- "1..*" ChannelAudio 
 
 @enduml
