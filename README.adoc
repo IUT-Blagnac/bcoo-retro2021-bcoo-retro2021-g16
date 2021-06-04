@@ -1,6 +1,6 @@
 = BC00 2021 - Rétro-conception Discord
 
-== Tables
+== Sommaire
 - link:retro/docs/CompteRendu.adoc[Compte Rendu]
 - link:retro/diagrammes/CompteRendu.adoc/DiagrammeSequence.png[Diagramme de séquence]
 
