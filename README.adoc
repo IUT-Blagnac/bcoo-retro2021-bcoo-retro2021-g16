@@ -1,6 +1,10 @@
 = BC00 2021 - Rétro-conception Discord
 
-== Membre du groupe
+== Tables
+- link:retro/docs/CompteRendu.adoc[Compte Rendu]
+- link:retro/diagrammes/CompteRendu.adoc/DiagrammeSequence.png[Diagramme de séquence]
+
+== Membres du groupe
 
 - Bastien Gimenez
 - Maxime Etcheverria
@@ -8,6 +12,5 @@
 
 == Outils utilisés/requis
 
-Discord
-
-Plantuml
+- Discord
+- PlantUML Editor
