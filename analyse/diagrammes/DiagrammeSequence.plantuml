@@ -1,27 +1,23 @@
 @startuml
 
 autonumber
+actor Enseignant
+Enseignant -> systeme: connection
 
-Enseignant -> profil: modifier
-
-activate secretaire
-secretaire -> profil: modifier
+activate systeme
+systeme -> profil: connection 
 
 activate profil
-profil -> profil: validation modification
-secretaire -> profil: consulter
-Enseignant -> profil: consulter
+profil -> profil: identification 
+profil --> systeme: identificattion valider
+systeme --> Enseignant: connecter
 
-profil -> Enseignant: afficher le profil
-profil -> secretaire: afficher le profil
-deactivate secretaire
+Enseignant -> systeme: modifier information
+systeme -> profil: modification des information 
+profil -> profil: sauvegarde modification
+profil --> systeme: modification sauvegarder
+systeme --> Enseignant: profil modifier avec succet
 
-activate Eleve
-Eleve -> profil: visualiser
-profil -> Eleve: afficher le profil
-
-deactivate Eleve
-deactivate profil
 
 
 @enduml
