@@ -16,7 +16,7 @@ Enseignant -> systeme: modifier information
 systeme -> profil: modification des information 
 profil -> profil: sauvegarde modification
 profil --> systeme: modification sauvegarder
-systeme --> Enseignant: profil modifier avec succet
+systeme --> Enseignant: profil modifier avec succès
 
 
 
