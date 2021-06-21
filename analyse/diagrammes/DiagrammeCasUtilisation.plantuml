@@ -5,8 +5,8 @@ usecase Profil_Enseignants as PE
 usecase Modifier_Profil_Enseignants as MPE
 usecase Identiters as IE
 usecase Module as ME
-usecase Specialiter 
-usecase consulter 
+usecase Specialite 
+usecase consulter
 usecase recherche
 
 actor Secretariat
@@ -27,7 +27,7 @@ consulter -- PE
 MPE -- IE
 MPE -- ME
 EV -- MPE
-MPE -- Specialiter
+MPE -- Specialite
 EV -- DME
 Secretariat -- DME
 
