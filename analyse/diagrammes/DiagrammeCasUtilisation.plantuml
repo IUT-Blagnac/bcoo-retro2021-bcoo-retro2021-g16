@@ -6,21 +6,22 @@ usecase Modifier_Profil_Enseignants as MPE
 usecase Identiters as IE
 usecase Module as ME
 usecase Specialiter 
+usecase consulter 
 
 actor Secretariat
-actor enseignantsVacatère as EV
+actor enseignantsVacataire as EV
 actor Eleve 
 
 usecase defini_le_module_de_ensegant as DME
 
 enseignants -- MPE
-PE ..> MPE : extends
 Secretariat -- MPE 
-Eleve -- PE : consulter
-PE -- IE
-PE -- ME
-PE -- Specialiter
-enseignants ..> EV : extends
+Eleve -- consulter
+consulter -- PE
+MPE -- IE
+MPE -- ME
+EV -- MPE
+MPE -- Specialiter
 EV -- DME
 Secretariat -- DME
 
