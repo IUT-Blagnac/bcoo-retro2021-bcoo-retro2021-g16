@@ -22,16 +22,27 @@ class Module{
 
 class profil {
   idProfil
-  Profil d un enseignant
 }
 
 class Eleve{
+  idEleve
+}
 
+class Secretaire{
+ idSecretaire
+}
+
+class EnseignantVacataire {
+  idEnseignantVa
+  nomentreprise
+  Emailpro
 }
 
 Enseignant "1" -- "1" formation : pratique 
 Enseignant "1..*" -- "1..*" Module : assigner
 Enseignant "1" -right- "1" profil : appartient
-Eleve "1..*" -down- "1" profil : consulter
+Eleve "1..*" -down- "1..*" profil : consulter
+Secretaire "1..*" -- "1..*" profil : modifier
+EnseignantVacataire ..> Enseignant : extend
 
 @enduml
