@@ -17,6 +17,9 @@ usecase defini_le_module_de_ensegant as DME
 enseignants -- MPE
 Secretariat -- MPE 
 Eleve -- consulter
+Secretariat -- consulter
+enseignants -- consulter
+EV -- consulter
 consulter -- PE
 MPE -- IE
 MPE -- ME
