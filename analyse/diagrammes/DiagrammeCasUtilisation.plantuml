@@ -7,6 +7,7 @@ usecase Identiters as IE
 usecase Module as ME
 usecase Specialiter 
 usecase consulter 
+usecase recherche
 
 actor Secretariat
 actor enseignantsVacataire as EV
@@ -19,6 +20,8 @@ Secretariat -- MPE
 Eleve -- consulter
 Secretariat -- consulter
 enseignants -- consulter
+consulter -- recherche
+recherche -- PE
 EV -- consulter
 consulter -- PE
 MPE -- IE
