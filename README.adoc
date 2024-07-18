@@ -1,10 +1,19 @@
-= BC00 2021 - Rétro-conception Discord
+= BC00 2021 - Groupe 16
 
-== Membre du groupe
+== Sommaire
+- link:analyse/images/maquette.png[Maquette]
 
-- Dupont (2A)
-- Durand (3B)
-- ...
+== Sommaire Rétro-conception
+- link:retro/docs/CompteRendu.adoc[Compte Rendu]
+- link:retro/diagrammes/CompteRendu.adoc/DiagrammeSequence.png[Diagramme de séquence]
+
+== Membres du groupe
+
+- Bastien Gimenez
+- Maxime Etcheverria
+- Kilian Milot
 
 == Outils utilisés/requis
 
+- Discord
+- PlantUML Editor

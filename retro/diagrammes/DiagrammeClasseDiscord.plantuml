@@ -1,0 +1,52 @@
+@startuml
+
+class utilisateur {
+  ID
+  Pseudo 
+  Age 
+  PhotoDeProfil
+  Statu
+  ReseauSociaux
+  adresseMail
+  numTel
+}
+
+class serveur {
+  ID
+  PhotoDuServeur
+  Nom
+  NombreMembre
+  Alchannel 
+  activerNotification()
+}
+
+class Role {
+  isAdmin
+  droits
+}
+
+class Channel {
+  ID
+  nom
+}
+
+class ChannelAudio{
+  nbPersonne
+  activerMicro()
+  activerSong()
+}
+
+class ChannelTextuel{
+  Message
+  EnvoyerPhoto()
+  EnvoyerVideo()
+  EnvoyerGif()
+}
+
+utilisateur"1..*" -- "1..*" serveur
+serveur"1" -- "1..*"  Role
+serveur "1 " -right- " 1..*" Channel : "           "
+Channel "1" -- "1..*"  ChannelTextuel 
+Channel "1" -- "1..*" ChannelAudio 
+
+@enduml

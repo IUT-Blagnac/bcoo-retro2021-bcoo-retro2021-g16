@@ -1,0 +1,29 @@
+@startuml
+
+autonumber
+actor EnseignantVacataire
+EnseignantVacataire -> systeme: connection
+
+activate systeme
+systeme -> profil: connection 
+
+activate profil
+profil -> profil: identification 
+profil --> systeme: identificattion valider
+systeme --> EnseignantVacataire: connecter
+
+EnseignantVacataire -> systeme: modifier information
+systeme -> profil: modification des information 
+profil -> profil: sauvegarde modification
+profil --> systeme: modification sauvegarder
+systeme --> EnseignantVacataire: profil modifier avec succès
+
+EnseignantVacataire -> systeme: definire un module
+systeme -> profil: module
+profil -> profil: enregistrement du module
+profil --> systeme: module enregistre
+systeme --> EnseignantVacataire: module defini avec succès
+
+
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+
+autonumber
+
+utilisateur -> serveur: connection
+
+activate serveur
+
+serveur -> admin: connection en tant administrateur
+serveur -> serveur: connection utilisateur
+
+activate admin
+admin --> admin: connection effectuer 
+admin -> serveur: message de retour
+deactivate admin
+
+serveur -> utilisateur: message connection
+deactivate serveur
+
+@enduml

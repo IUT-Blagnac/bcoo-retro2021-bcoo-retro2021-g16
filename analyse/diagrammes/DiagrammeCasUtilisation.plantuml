@@ -1,0 +1,34 @@
+@startuml
+
+actor enseignants
+usecase Profil_Enseignants as PE
+usecase Modifier_Profil_Enseignants as MPE
+usecase Identiters as IE
+usecase Module as ME
+usecase Specialite 
+usecase consulter
+usecase recherche
+
+actor Secretariat
+actor enseignantsVacataire as EV
+actor Eleve 
+
+usecase defini_le_module_de_ensegant as DME
+
+enseignants -- MPE
+Secretariat -- MPE 
+Eleve -- consulter
+Secretariat -- consulter
+enseignants -- consulter
+consulter -- recherche
+recherche -- PE
+EV -- consulter
+consulter -- PE
+MPE -- IE
+MPE -- ME
+EV -- MPE
+MPE -- Specialite
+EV -- DME
+Secretariat -- DME
+
+@enduml
